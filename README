@@ -1,1 +1,11 @@
 Django split test module
+
+Installation
+===============
+1. Add 'splittests.middleware.AssignSplitTests' to your middleware.
+2. Add tests to settings:
+    
+    SPLITTESTS = {'layout': ['option1','option2']}
+    
+3. In your views or templates, check for request.splittest_layout to see 
+   which setting the current user has.
