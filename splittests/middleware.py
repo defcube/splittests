@@ -9,6 +9,8 @@ class AssignSplitTests(object):
             splittests = settings.SPLITTESTS            
         except AttributeError:
             return
+        if not splittests:
+            return
         for key, values in splittests.iteritems():
             self._set_splittest_value(key, request, values)
 
